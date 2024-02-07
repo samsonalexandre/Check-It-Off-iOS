@@ -8,37 +8,34 @@
 import SwiftUI
 
 struct LoginView: View {
-    
-    @State var email = ""
-    @State var password = ""
+    @StateObject var vieweModel = LoginViewViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 //Header
-                HeaderView()
-                //Login Form
+                HeaderView(title: "Check-It-Of", subtitle: "Aufgaben zu ende bringen", angle: 15, background: .pink)
+                
                 Form {
-                    TextField("Email Adresse", text: $email)
+                    
+                    if !vieweModel.errorMessage.isEmpty {
+                        Text(vieweModel.errorMessage)
+                            .foregroundColor(Color.red)
+                    }
+                    
+                    TextField("Email Adresse", text: $vieweModel.email)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                        .autocapitalization(.none)
+                    
+                    SecureField("Passwort", text: $vieweModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
-                    SecureField("Passwort", text: $password)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                    
-                    Button {
-                        //Log in
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(Color.blue)
-                            
-                            Text("Anmelden")
-                                .foregroundColor(Color.white)
-                                .bold()
-                        }
+                    ToDoButton(title: "Anmelden", background: .blue) {
+                        vieweModel.login()
                     }
                     .padding()
                 }
+                .offset(y: -50)
                 //Create Account
                 VStack {
                     Text("Neu hier?")
