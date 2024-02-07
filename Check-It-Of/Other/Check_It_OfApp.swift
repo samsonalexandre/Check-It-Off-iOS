@@ -16,7 +16,7 @@ struct Check_It_OfApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
