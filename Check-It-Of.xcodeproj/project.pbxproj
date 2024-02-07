@@ -16,7 +16,6 @@
 		966859FB2B73834200748E6F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 966859FA2B73834200748E6F /* FirebaseAnalyticsSwift */; };
 		966859FD2B73834200748E6F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 966859FC2B73834200748E6F /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		966859FF2B73834200748E6F /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 966859FE2B73834200748E6F /* FirebaseAppCheck */; };
-		96685A012B73853C00748E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96685A002B73853C00748E6F /* GoogleService-Info.plist */; };
 		96685A072B73891000748E6F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A062B73891000748E6F /* ProfileView.swift */; };
 		96685A092B73895E00748E6F /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A082B73895E00748E6F /* ToDoListView.swift */; };
 		96685A0B2B73897D00748E6F /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A0A2B73897D00748E6F /* NewItemView.swift */; };
@@ -35,6 +34,9 @@
 		96685A252B73905400748E6F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A242B73905400748E6F /* HeaderView.swift */; };
 		96685A272B73A30100748E6F /* ToDoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A262B73A30100748E6F /* ToDoButton.swift */; };
 		96685A2A2B73B83E00748E6F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 96685A292B73B83E00748E6F /* FirebaseAuth */; };
+		96685A2C2B73C35400748E6F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 96685A2B2B73C35400748E6F /* FirebaseFirestore */; };
+		96685A2E2B73C3ED00748E6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A2D2B73C3ED00748E6F /* Extensions.swift */; };
+		96685A302B73D0C800748E6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96685A2F2B73D0C800748E6F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,6 @@
 		966859DF2B7375FA00748E6F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		966859E12B7375FB00748E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		966859E42B7375FB00748E6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		96685A002B73853C00748E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96685A062B73891000748E6F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		96685A082B73895E00748E6F /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		96685A0A2B73897D00748E6F /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
@@ -61,6 +62,8 @@
 		96685A222B738C1F00748E6F /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		96685A242B73905400748E6F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		96685A262B73A30100748E6F /* ToDoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoButton.swift; sourceTree = "<group>"; };
+		96685A2D2B73C3ED00748E6F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		96685A2F2B73D0C800748E6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 				966859F92B73834200748E6F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				966859FF2B73834200748E6F /* FirebaseAppCheck in Frameworks */,
 				966859FD2B73834200748E6F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				96685A2C2B73C35400748E6F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,9 +163,10 @@
 		96685A052B7387EE00748E6F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				96685A2F2B73D0C800748E6F /* GoogleService-Info.plist */,
 				966859DD2B7375FA00748E6F /* Check_It_OfApp.swift */,
 				966859E12B7375FB00748E6F /* Assets.xcassets */,
-				96685A002B73853C00748E6F /* GoogleService-Info.plist */,
+				96685A2D2B73C3ED00748E6F /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				966859FC2B73834200748E6F /* FirebaseAnalyticsWithoutAdIdSupport */,
 				966859FE2B73834200748E6F /* FirebaseAppCheck */,
 				96685A292B73B83E00748E6F /* FirebaseAuth */,
+				96685A2B2B73C35400748E6F /* FirebaseFirestore */,
 			);
 			productName = "Check-It-Of";
 			productReference = 966859DA2B7375FA00748E6F /* Check-It-Of.app */;
@@ -244,7 +250,7 @@
 			files = (
 				966859E52B7375FB00748E6F /* Preview Assets.xcassets in Resources */,
 				966859E22B7375FB00748E6F /* Assets.xcassets in Resources */,
-				96685A012B73853C00748E6F /* GoogleService-Info.plist in Resources */,
+				96685A302B73D0C800748E6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +276,7 @@
 				96685A1B2B738BA600748E6F /* ToDoListViewViewModel.swift in Sources */,
 				96685A1F2B738BE400748E6F /* LoginViewViewModel.swift in Sources */,
 				966859DE2B7375FA00748E6F /* Check_It_OfApp.swift in Sources */,
+				96685A2E2B73C3ED00748E6F /* Extensions.swift in Sources */,
 				96685A152B738AF900748E6F /* ToDoListItem.swift in Sources */,
 				96685A0B2B73897D00748E6F /* NewItemView.swift in Sources */,
 				96685A1D2B738BC800748E6F /* NewItemViewViewModel.swift in Sources */,
@@ -419,7 +426,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alekssamson.Check-It-Of";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alekssamson.Check-It-Of-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -447,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alekssamson.Check-It-Of";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alekssamson.Check-It-Of-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -519,6 +526,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 966859F52B73834200748E6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		96685A2B2B73C35400748E6F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 966859F52B73834200748E6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
