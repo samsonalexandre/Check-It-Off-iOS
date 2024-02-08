@@ -1,5 +1,5 @@
 //
-//  MainViewViewModel.swift
+//  MainViewModel.swift
 //  Check-It-Of
 //
 //  Created by Alexandre Samson on 07.02.24.
@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-class MainViewViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     @Published var currentUserId: String = ""
     private var handler: AuthStateDidChangeListenerHandle?
     

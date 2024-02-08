@@ -1,5 +1,5 @@
 //
-//  RegisterViewViewModel.swift
+//  RegisterViewModel.swift
 //  Check-It-Of
 //
 //  Created by Alexandre Samson on 07.02.24.
@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-class RegisterViewViewModel: ObservableObject {
+class RegisterViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""

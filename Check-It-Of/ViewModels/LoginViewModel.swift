@@ -1,5 +1,5 @@
 //
-//  LoginViewViewModel.swift
+//  LoginViewModel.swift
 //  Check-It-Of
 //
 //  Created by Alexandre Samson on 07.02.24.
@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-class LoginViewViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage = ""
