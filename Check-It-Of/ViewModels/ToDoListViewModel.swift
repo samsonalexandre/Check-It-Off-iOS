@@ -10,5 +10,11 @@ import Foundation
 //ViewModel for list of items view
 //Primary tab
 class ToDoListViewModel: ObservableObject {
+    @Published var showingNewItemView = false
+    
     init() {}
+    
+    func delete(id: String) {
+        
+    }
 }

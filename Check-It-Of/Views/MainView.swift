@@ -17,7 +17,7 @@ struct MainView: View {
             LoginView()
         }
     }
-    
+
     @ViewBuilder
     var accountView: some View {
         TabView {
@@ -29,7 +29,7 @@ struct MainView: View {
             ProfileView()
                 .tabItem {
                     Label("Profil", systemImage: "person.circle")
-                }
+            }
         }
     }
 }

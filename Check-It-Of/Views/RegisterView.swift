@@ -42,4 +42,5 @@ struct RegisterView: View {
 
 #Preview {
     RegisterView()
+        .environmentObject(RegisterViewModel())
 }

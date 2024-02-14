@@ -20,7 +20,7 @@ struct ToDoButton: View {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(background)
                 
-                Text(title)//"Anmelden"
+                Text(title)
                     .foregroundColor(Color.white)
                     .bold()
             }

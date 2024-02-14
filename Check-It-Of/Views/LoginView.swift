@@ -20,7 +20,6 @@ struct LoginView: View {
                     
                     if !vieweModel.errorMessage.isEmpty {
                         Text(vieweModel.errorMessage)
-                            .foregroundColor(Color.red)
                     }
                     
                     TextField("Email Adresse", text: $vieweModel.email)
@@ -36,6 +35,7 @@ struct LoginView: View {
                     .padding()
                 }
                 .offset(y: -50)
+                
                 //Create Account
                 VStack {
                     Text("Neu hier?")
