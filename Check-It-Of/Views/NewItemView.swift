@@ -18,13 +18,13 @@ struct NewItemView: View {
                 .bold()
                 .padding(.top, 100)
             Form {
-                TextField("Title", text: $viewModel.title)
+                TextField("Titel", text: $viewModel.title)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
-                DatePicker("Due Date", selection: $viewModel.dueDate)
+                DatePicker("Fälligkeitsdatum", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                 
-                ToDoButton(title: "Save", background: .pink) {
+                ToDoButton(title: "Speichern", background: .pink) {
                     if viewModel.canSave {
                         viewModel.save()
                         newItemPresented = false
@@ -32,10 +32,11 @@ struct NewItemView: View {
                         viewModel.showAlert = true
                     }
                 }
+                
                 .padding()
             }
             .alert(isPresented: $viewModel.showAlert) {
-                Alert(title: Text("Error"), message: Text("Please fill in all fields and select due date that is today or newer."))
+                Alert(title: Text("Error"), message: Text("Bitte füllen Sie alle Felder aus und wählen Sie das heute oder neuere Fälligkeitsdatum aus."))
             }
         }
     }

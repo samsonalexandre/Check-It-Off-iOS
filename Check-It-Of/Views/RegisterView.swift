@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct RegisterView: View {
     @StateObject var viewModel = RegisterViewModel()
@@ -14,6 +15,8 @@ struct RegisterView: View {
         VStack {
             //Header
             HeaderView(title: "Registrieren", subtitle: "Organisieren Sie Aufgaben", angle: -15, background: .orange)
+            
+            
             
             Form {
                 TextField("Vollständiger Name", text: $viewModel.name)

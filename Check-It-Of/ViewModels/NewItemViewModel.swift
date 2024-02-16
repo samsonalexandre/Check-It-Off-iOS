@@ -13,7 +13,7 @@ import FirebaseAuth
 class NewItemViewModel: ObservableObject {
     @Published var title = ""
     @Published var dueDate = Date()
-    @Published var showAlert = true
+    @Published var showAlert = false
     
     init() {}
     

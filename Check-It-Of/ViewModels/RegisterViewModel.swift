@@ -8,11 +8,13 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import PhotosUI
 
 class RegisterViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
+  
     
     init() {}
     
