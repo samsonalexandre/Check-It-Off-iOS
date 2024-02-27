@@ -15,8 +15,6 @@ class NewItemViewModel: ObservableObject {
     @Published var dueDate = Date()
     @Published var showAlert = false
     
-    init() {}
-    
     func save() {
         guard canSave else {
             return

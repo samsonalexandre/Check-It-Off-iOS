@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class WeatherData: ObservableObject {
+    @Published var weather: ResponseBody? // Die Wetterdaten
+    
+    init(weather: ResponseBody? = nil) {
+        self.weather = weather
+    }
+}

@@ -10,14 +10,13 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class ProfileViewModel: ObservableObject {
-    init() {}
-    
     @Published var user: User? = nil
     
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
         }
+        
         let db = Firestore.firestore()
         db.collection("users").document(userId).getDocument { [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else {

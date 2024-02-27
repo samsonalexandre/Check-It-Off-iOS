@@ -8,15 +8,13 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import Combine
 import PhotosUI
 
 class RegisterViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
-  
-    
-    init() {}
     
     func register() {
         guard validate() else {
@@ -43,8 +41,8 @@ class RegisterViewModel: ObservableObject {
     
     private func validate() -> Bool {
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
-        !email.trimmingCharacters(in: .whitespaces).isEmpty,
-        !password.trimmingCharacters(in: .whitespaces).isEmpty else {
+              !email.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
             return false
         }
         

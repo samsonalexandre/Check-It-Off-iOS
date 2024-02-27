@@ -5,7 +5,9 @@
 //  Created by Alexandre Samson on 07.02.24.
 //
 
-import SwiftUI
+import SwiftUI // Für SwiftUI-Bibliothek
+import FirebaseAuth // Für Authentifizierung mit Firebase
+import FirebaseFirestore // Für die Verbindung mit der Firestore-Datenbank
 
 struct NewItemView: View {
     @StateObject var viewModel = NewItemViewModel()
@@ -31,12 +33,11 @@ struct NewItemView: View {
                     } else {
                         viewModel.showAlert = true
                     }
-                }
-                
+                }                
                 .padding()
             }
             .alert(isPresented: $viewModel.showAlert) {
-                Alert(title: Text("Error"), message: Text("Bitte füllen Sie alle Felder aus und wählen Sie das heute oder neuere Fälligkeitsdatum aus."))
+                Alert(title: Text("Fehler"), message: Text("Bitte füllen Sie alle Felder aus, und wählen Sie eine Fälligkeitsdatum."))
             }
         }
     }
@@ -45,6 +46,10 @@ struct NewItemView: View {
 #Preview {
     NewItemView(newItemPresented: Binding(get: {
         return true
-    }, set: { _ in
-    }))
+    }, set: { _ in }))
 }
+
+/*
+ NewItemView(newItemPresented: ...): Dies erstellt eine Instanz der NewItemView, die die erforderlichen Bindings oder andere Parameter erhält. In diesem Fall wird das Binding newItemPresented bereitgestellt, um den Zustand zu steuern, ob das neue Element präsentiert wird.
+ Binding(get: { ... }, set: { ... }): Hier wird ein Binding definiert, das den Wert von newItemPresented steuert. In diesem spezifischen Beispiel wird der Getter verwendet, um immer true zurückzugeben und der Setter wird leer gelassen. Dies bedeutet, dass das Binding immer true ist und der Setter nicht spezifiziert ist, da die Vorschau den Zustand nicht ändern muss.
+ */

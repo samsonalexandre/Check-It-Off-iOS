@@ -9,10 +9,8 @@ import Foundation
 import FirebaseFirestore
 import FirebaseAuth
 
-//ViewModel for single to do list item view(each row in items list
+// ViewModel für einzelne Aufgaben in der Listenansicht
 class ToDoListItemViewModel: ObservableObject {
-    init() {}
-    
     func toggleIsDone(item: ToDoListItem) {
         var itemCopy = item
         itemCopy.setDone(!item.isDone)

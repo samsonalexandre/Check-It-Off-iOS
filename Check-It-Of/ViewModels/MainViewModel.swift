@@ -10,6 +10,9 @@ import FirebaseAuth
 
 class MainViewModel: ObservableObject {
     @Published var currentUserId: String = ""
+    @Published var weatherData = WeatherData()
+    @Published var weatherViewModel = WeatherViewModel()
+    
     private var handler: AuthStateDidChangeListenerHandle?
     
     init() {

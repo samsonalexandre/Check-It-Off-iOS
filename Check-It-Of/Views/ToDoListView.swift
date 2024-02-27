@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct ToDoListView: View {
     @StateObject var viewModel: ToDoListViewModel

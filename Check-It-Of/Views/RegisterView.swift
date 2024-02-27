@@ -16,8 +16,6 @@ struct RegisterView: View {
             //Header
             HeaderView(title: "Registrieren", subtitle: "Organisieren Sie Aufgaben", angle: -15, background: .orange)
             
-            
-            
             Form {
                 TextField("Vollständiger Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())

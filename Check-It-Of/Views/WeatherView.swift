@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import CoreLocation // Für die Standortverwaltung
+import Combine
 
 struct WeatherView: View {
-    // Replace YOUR_API_KEY in WeatherManager with your own API key for the app to work
-    var weather: ResponseBody
+    
+    @State var weather: ResponseBody?
     
     var body: some View {
         ZStack(alignment: .leading) {
             VStack {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(weather.name)
+                    Text(weather?.name ?? "")
                         .bold()
                         .font(.title)
                     
@@ -32,13 +34,13 @@ struct WeatherView: View {
                             Image(systemName: "cloud")
                                 .font(.system(size: 40))
                             
-                            Text("\(weather.weather[0].main)")
+                            Text("\(weather?.weather[0].main ?? "")")
                         }
                         .frame(width: 150, alignment: .leading)
                         
                         Spacer()
                         
-                        Text(weather.main.feelsLike.roundDouble() + "°")
+                        Text((weather?.main.feelsLike.roundDouble() ?? "") + "°")
                             .font(.system(size: 100))
                             .fontWeight(.bold)
                             .padding()
@@ -71,15 +73,15 @@ struct WeatherView: View {
                         .padding(.bottom)
                     
                     HStack {
-                        WeatherRow(logo: "thermometer", name: "Min temp", value: (weather.main.tempMin.roundDouble() + ("°")))
+                        WeatherRow(logo: "thermometer", name: "Min temp", value: ((weather?.main.tempMin.roundDouble() ?? "") + ("°")))
                         Spacer()
-                        WeatherRow(logo: "thermometer", name: "Max temp", value: (weather.main.tempMax.roundDouble() + "°"))
+                        WeatherRow(logo: "thermometer", name: "Max temp", value: ((weather?.main.tempMax.roundDouble() ?? "") + "°"))
                     }
                     
                     HStack {
-                        WeatherRow(logo: "wind", name: "Wind speed", value: (weather.wind.speed.roundDouble() + " m/s"))
+                        WeatherRow(logo: "wind", name: "Wind speed", value: ((weather?.wind.speed.roundDouble() ?? "") + " m/s"))
                         Spacer()
-                        WeatherRow(logo: "humidity", name: "Humidity", value: "\(weather.main.humidity.roundDouble())%")
+                        WeatherRow(logo: "humidity", name: "Humidity", value: "\(String(describing: weather?.main.humidity.roundDouble()))%")
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -97,5 +99,6 @@ struct WeatherView: View {
 }
 
 #Preview {
-    APIView()
+    WeatherView(weather: previewWeather)
 }
+

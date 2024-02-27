@@ -5,7 +5,8 @@
 //  Created by Alexandre Samson on 07.02.24.
 //
 
-import SwiftUI
+import SwiftUI // Für SwiftUI-Bibliothek
+import FirebaseAuth // Für Authentifizierung mit Firebase
 
 struct LoginView: View {
     @StateObject var vieweModel = LoginViewModel()

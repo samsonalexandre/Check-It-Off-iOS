@@ -5,7 +5,9 @@
 //  Created by Alexandre Samson on 07.02.24.
 //
 
-import SwiftUI
+import SwiftUI // Für SwiftUI-Bibliothek
+import FirebaseAuth // Für Authentifizierung mit Firebase
+import FirebaseFirestore
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()

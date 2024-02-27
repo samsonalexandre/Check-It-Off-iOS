@@ -8,18 +8,17 @@
 import Foundation
 import FirebaseAuth
 
+// ViewModel für die Anmeldungsansicht
 class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage = ""
     
-    init() {}
-    
     func login() {
         guard validate() else {
             return
         }
-      
+        
         Auth.auth().signIn(withEmail: email, password: password)
     }
     
@@ -27,7 +26,6 @@ class LoginViewModel: ObservableObject {
         errorMessage = ""
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else {
-            
             errorMessage = "Bitte füllen Sie alle Felder aus"
             return false
         }
