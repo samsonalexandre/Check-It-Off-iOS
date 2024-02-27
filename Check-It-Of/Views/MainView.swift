@@ -31,6 +31,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Profil", systemImage: "person.circle")
                 }
+            
             // WeatherView hinzugefügt
             WeatherView(weather: weatherViewModel.weatherData)
                 .tabItem {
