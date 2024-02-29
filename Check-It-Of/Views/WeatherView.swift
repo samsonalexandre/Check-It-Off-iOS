@@ -77,15 +77,16 @@ struct WeatherView: View {
                         Spacer()
                         WeatherRowView(logo: "thermometer", name: "Höchsttemperatur", value: (weather.main.tempMax.roundDouble() + "°"))
                     }
-                    
+                    /*
                     HStack {
                         WeatherRowView(logo: "wind", name: "Windgeschwindigkeit", value: (weather.wind.speed.roundDouble() + " m/s"))
                         Spacer()
                         WeatherRowView(logo: "humidity", name: "Luftfeuchtigkeit", value: "\(weather.main.humidity.roundDouble())%")
                     }
+                    */
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
+                .padding(20)
                 .padding(.bottom, 20)
                 .foregroundColor(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
                 .background(.white)
