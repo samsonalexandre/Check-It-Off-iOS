@@ -9,9 +9,11 @@ import Foundation // Für grundlegende Foundation-Bibliothek
 import CoreLocation // Für die Standortverwaltung
 import Combine // Für die Verwendung von Combine-Framework zur Reaktivprogrammierung
 
+
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private let manager = CLLocationManager()
-    @Published var location: CLLocation?
+    let manager = CLLocationManager()
+    
+    @Published var location: CLLocationCoordinate2D?
     @Published var isLoading = false
     
     override init() {
@@ -20,12 +22,12 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func requestLocation() {
-        manager.requestWhenInUseAuthorization()
+        isLoading = true
         manager.requestLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        location = locations.first
+        location = locations.first?.coordinate
         isLoading = false
     }
     

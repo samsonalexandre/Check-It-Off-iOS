@@ -11,70 +11,92 @@ import Combine
 
 struct WeatherView: View {
     
-    @State var weather: ResponseBody?
+    var weather: ResponseBody
     
     var body: some View {
-        VStack(spacing: 0) {
+        ZStack {
             VStack {
-                Text(weather?.name ?? "")
-                    .bold()
-                    .font(.title)
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(weather.name)
+                        .bold()
+                        .font(.title)
+                    
+                    Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
+                        .fontWeight(.light)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
-                    .fontWeight(.light)
-                    .padding(.bottom)
+                Spacer() // Platziert den Inhalt oben und gibt Platz für die Tabs
                 
-                HStack {
-                    VStack(spacing: 20) {
-                        Image(systemName: "cloud")
-                            .font(.system(size: 40))
+                // Hier bleibt der restliche Inhalt des WeatherViews
+                VStack {
+                    HStack {
+                        VStack(spacing: 20) {
+                            Image(systemName: "cloud")
+                                .font(.system(size: 40))
+                            
+                            Text("\(weather.weather[0].main)")
+                        }
+                        .frame(width: 150, alignment: .leading)
                         
-                        Text("\(weather?.weather[0].main ?? "")")
+                        Spacer()
+                        
+                        Text(weather.main.feelsLike.roundDouble() + "°")
+                            .font(.system(size: 100))
+                            .fontWeight(.bold)
+                            .padding()
                     }
-                    .frame(width: 150, alignment: .leading)
                     
                     Spacer()
+                        .frame(height:  100)
                     
-                    Text((weather?.main.feelsLike.roundDouble() ?? "") + "°")
-                        .font(.system(size: 100))
-                        .fontWeight(.bold)
-                        .padding()
+                    AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 350)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    
+                    Spacer()
                 }
-                .padding(.bottom)
+                .frame(maxWidth: .infinity, alignment: .trailing)
             }
             .padding()
-            AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 350)
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
-            .foregroundColor(.white)
-            
-            Spacer()
+            .frame(maxWidth: .infinity, alignment: .leading)
             
             VStack {
-                HStack {
-                    WeatherRow(logo: "thermometer", name: "Min temp", value: ((weather?.main.tempMin.roundDouble() ?? "") + ("°")))
-                    Spacer()
-                    WeatherRow(logo: "thermometer", name: "Max temp", value: ((weather?.main.tempMax.roundDouble() ?? "") + "°"))
+                Spacer() // Platziert den Tab-Bar unten
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Wetter")
+                        .bold()
+                        .padding(.bottom)
+                    
+                    HStack {
+                        WeatherRow(logo: "thermometer", name: "Mindesttemperatur", value: (weather.main.tempMin.roundDouble() + ("°")))
+                        Spacer()
+                        WeatherRow(logo: "thermometer", name: "Höchsttemperatur", value: (weather.main.tempMax.roundDouble() + "°"))
+                    }
+                    
+                    HStack {
+                        WeatherRow(logo: "wind", name: "Windgeschwindigkeit", value: (weather.wind.speed.roundDouble() + " m/s"))
+                        Spacer()
+                        WeatherRow(logo: "humidity", name: "Luftfeuchtigkeit", value: "\(weather.main.humidity.roundDouble())%")
+                    }
                 }
-                
-                HStack {
-                    WeatherRow(logo: "wind", name: "Wind speed", value: ((weather?.wind.speed.roundDouble() ?? "") + " m/s"))
-                    Spacer()
-                    WeatherRow(logo: "humidity", name: "Humidity", value: "\(String(describing: weather?.main.humidity.roundDouble()))%")
-                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .padding(.bottom, 20)
+                .foregroundColor(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+                .background(.white)
+                .cornerRadius(20, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight])
+                .offset(y: -88)
             }
-            .padding()
-            .background(Color.white)
-            .cornerRadius(20, corners: [.topLeft, .topRight])
-            .offset(y: -20) // Offset to make space for the tabs below
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+        .preferredColorScheme(.dark)
     }
 }
 

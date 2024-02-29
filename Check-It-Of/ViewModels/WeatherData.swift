@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/*
 class WeatherData: ObservableObject {
     @Published var weather: ResponseBody? // Die Wetterdaten
     
@@ -14,3 +14,4 @@ class WeatherData: ObservableObject {
         self.weather = weather
     }
 }
+*/

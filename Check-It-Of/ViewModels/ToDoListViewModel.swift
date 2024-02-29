@@ -8,8 +8,8 @@
 import Foundation
 import FirebaseFirestore
 
-//ViewModel for list of items view
-//Primary tab
+// ViewModel für die Ansicht der Liste von Elementen
+// Primärregister
 class ToDoListViewModel: ObservableObject {
     @Published var showingNewItemView = false
     private let userId: String

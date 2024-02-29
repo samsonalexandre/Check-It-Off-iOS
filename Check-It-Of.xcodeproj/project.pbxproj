@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9633B86A2B909CC100655C31 /* WeatherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B8692B909CC100655C31 /* WeatherDetailsView.swift */; };
+		9633B86C2B909E6100655C31 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B86B2B909E6100655C31 /* LoadingView.swift */; };
+		9633B86E2B90B09D00655C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B86D2B90B09D00655C31 /* ContentView.swift */; };
+		9633B8702B90B0EE00655C31 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B86F2B90B0EE00655C31 /* WelcomeView.swift */; };
 		965AA52D2B7D1D0B00E07A0C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 965AA52C2B7D1D0B00E07A0C /* FirebaseFirestoreSwift */; };
 		965B87D72B8C8638001B6619 /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87D62B8C8638001B6619 /* WeatherRow.swift */; };
 		965B87D92B8C86C3001B6619 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87D82B8C86C3001B6619 /* WeatherManager.swift */; };
@@ -50,10 +54,13 @@
 		96CD36F62B8DF80800FB85D7 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD36F52B8DF80800FB85D7 /* WeatherData.swift */; };
 		96CD36F82B8E0FF400FB85D7 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD36F72B8E0FF400FB85D7 /* WeatherViewModel.swift */; };
 		96E332A82B7F703D0044DFBD /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E332A72B7F703D0044DFBD /* WeatherView.swift */; };
-		96E332AA2B7F710B0044DFBD /* APIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E332A92B7F710B0044DFBD /* APIViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9633B8692B909CC100655C31 /* WeatherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsView.swift; sourceTree = "<group>"; };
+		9633B86B2B909E6100655C31 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9633B86D2B90B09D00655C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9633B86F2B90B0EE00655C31 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		965B87D62B8C8638001B6619 /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
 		965B87D82B8C86C3001B6619 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		965B87DA2B8C8723001B6619 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -86,7 +93,6 @@
 		96CD36F52B8DF80800FB85D7 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		96CD36F72B8E0FF400FB85D7 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		96E332A72B7F703D0044DFBD /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
-		96E332A92B7F710B0044DFBD /* APIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,10 @@
 				96685A242B73905400748E6F /* HeaderView.swift */,
 				96685A262B73A30100748E6F /* ToDoButton.swift */,
 				96E332A72B7F703D0044DFBD /* WeatherView.swift */,
+				9633B8692B909CC100655C31 /* WeatherDetailsView.swift */,
+				9633B86B2B909E6100655C31 /* LoadingView.swift */,
+				9633B86D2B90B09D00655C31 /* ContentView.swift */,
+				9633B86F2B90B0EE00655C31 /* WelcomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,7 +201,6 @@
 				96685A202B738BFE00748E6F /* RegisterViewModel.swift */,
 				96685A1A2B738BA600748E6F /* ToDoListViewModel.swift */,
 				96685A222B738C1F00748E6F /* ToDoListItemViewModel.swift */,
-				96E332A92B7F710B0044DFBD /* APIViewModel.swift */,
 				96CD36F52B8DF80800FB85D7 /* WeatherData.swift */,
 				96CD36F72B8E0FF400FB85D7 /* WeatherViewModel.swift */,
 			);
@@ -318,12 +327,14 @@
 				96685A092B73895E00748E6F /* ToDoListView.swift in Sources */,
 				965B87DE2B8C884B001B6619 /* ModelData.swift in Sources */,
 				96685A212B738BFE00748E6F /* RegisterViewModel.swift in Sources */,
+				9633B8702B90B0EE00655C31 /* WelcomeView.swift in Sources */,
 				96685A272B73A30100748E6F /* ToDoButton.swift in Sources */,
 				96685A172B738B3A00748E6F /* MainViewModel.swift in Sources */,
 				966859E02B7375FA00748E6F /* MainView.swift in Sources */,
 				965B87D72B8C8638001B6619 /* WeatherRow.swift in Sources */,
 				96685A0F2B7389BA00748E6F /* RegisterView.swift in Sources */,
 				96685A192B738B8A00748E6F /* ProfileViewModel.swift in Sources */,
+				9633B86A2B909CC100655C31 /* WeatherDetailsView.swift in Sources */,
 				96685A112B738A1400748E6F /* ToDoListItemView.swift in Sources */,
 				96685A132B738A8300748E6F /* User.swift in Sources */,
 				96685A072B73891000748E6F /* ProfileView.swift in Sources */,
@@ -334,10 +345,11 @@
 				96685A1F2B738BE400748E6F /* LoginViewModel.swift in Sources */,
 				966859DE2B7375FA00748E6F /* Check_It_OfApp.swift in Sources */,
 				965B87D92B8C86C3001B6619 /* WeatherManager.swift in Sources */,
-				96E332AA2B7F710B0044DFBD /* APIViewModel.swift in Sources */,
+				9633B86C2B909E6100655C31 /* LoadingView.swift in Sources */,
 				965B87DB2B8C8723001B6619 /* Extensions.swift in Sources */,
 				96685A152B738AF900748E6F /* ToDoListItem.swift in Sources */,
 				96685A0B2B73897D00748E6F /* NewItemView.swift in Sources */,
+				9633B86E2B90B09D00655C31 /* ContentView.swift in Sources */,
 				96685A1D2B738BC800748E6F /* NewItemViewModel.swift in Sources */,
 				96685A232B738C2000748E6F /* ToDoListItemViewModel.swift in Sources */,
 				965B87E02B8C8DB8001B6619 /* LocationManager.swift in Sources */,

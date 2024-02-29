@@ -30,6 +30,7 @@ struct ToDoListView: View {
                 }
                 .listStyle(PlainListStyle())
             }
+           // .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
             .navigationTitle("Aufgabenliste")
             .toolbar {
                 Button {
