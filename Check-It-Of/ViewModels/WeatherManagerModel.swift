@@ -10,13 +10,13 @@ import CoreLocation
 import Combine
 
 // Manager-Klasse für Wetterabruf
-class WeatherManager {
-    // HTTP request to get the current weather depending on the coordinates we got from LocationManager
+class WeatherManagerModel {
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
-        // Replace YOUR_API_KEY in the link below with your own
-        let apiKey = "d05d140071e6bfee973ba935949bed53"
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric") else { fatalError("Missing URL") }
 
+        let apiKey = "d05d140071e6bfee973ba935949bed53"
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric") else { 
+            fatalError("Missing URL")
+        }
 
         let urlRequest = URLRequest(url: url)
         
@@ -30,7 +30,7 @@ class WeatherManager {
     }
 }
 
-// Model of the response body we get from calling the OpenWeather API
+// Modell der Antwortnachricht, die wir erhalten, wenn wir die OpenWeather-API aufrufen
 struct ResponseBody: Decodable {
     var coord: CoordinatesResponse
     var weather: [WeatherResponse]
