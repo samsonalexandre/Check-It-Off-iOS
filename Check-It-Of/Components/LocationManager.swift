@@ -32,7 +32,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error getting location", error)
+        print("Fehler beim Abrufen des Standorts", error)
         isLoading = false
     }
 }

@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Check-It-Of
 //
-//  Created by Alexandre Samson on 07.02.24.
+//  Created by Alexandre Samson on 08.02.24.
 //
 
 import SwiftUI
@@ -35,7 +35,7 @@ struct MainView: View {
                         Label("Wetter", systemImage: "cloud.sun.fill")
                     }
             }
-            .accentColor(.blue) // Wählen Sie die Akzentfarbe für die Registerkarten
+            .accentColor(.blue) //Akzentfarbe für die Registerkarten
         }
 }
 

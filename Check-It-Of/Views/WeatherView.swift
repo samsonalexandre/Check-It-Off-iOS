@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import CoreLocation // Für die Standortverwaltung
-import Combine
 
 struct WeatherView: View {
     
@@ -55,6 +53,7 @@ struct WeatherView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 350)
+                            .offset(y: -90)
                     } placeholder: {
                         ProgressView()
                     }
@@ -74,15 +73,15 @@ struct WeatherView: View {
                         .padding(.bottom)
                     
                     HStack {
-                        WeatherRow(logo: "thermometer", name: "Mindesttemperatur", value: (weather.main.tempMin.roundDouble() + ("°")))
+                        WeatherRowView(logo: "thermometer", name: "Mindesttemperatur", value: (weather.main.tempMin.roundDouble() + ("°")))
                         Spacer()
-                        WeatherRow(logo: "thermometer", name: "Höchsttemperatur", value: (weather.main.tempMax.roundDouble() + "°"))
+                        WeatherRowView(logo: "thermometer", name: "Höchsttemperatur", value: (weather.main.tempMax.roundDouble() + "°"))
                     }
                     
                     HStack {
-                        WeatherRow(logo: "wind", name: "Windgeschwindigkeit", value: (weather.wind.speed.roundDouble() + " m/s"))
+                        WeatherRowView(logo: "wind", name: "Windgeschwindigkeit", value: (weather.wind.speed.roundDouble() + " m/s"))
                         Spacer()
-                        WeatherRow(logo: "humidity", name: "Luftfeuchtigkeit", value: "\(weather.main.humidity.roundDouble())%")
+                        WeatherRowView(logo: "humidity", name: "Luftfeuchtigkeit", value: "\(weather.main.humidity.roundDouble())%")
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)

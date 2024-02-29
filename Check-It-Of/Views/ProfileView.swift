@@ -2,11 +2,11 @@
 //  ProfileView.swift
 //  Check-It-Of
 //
-//  Created by Alexandre Samson on 07.02.24.
+//  Created by Alexandre Samson on 08.02.24.
 //
 
-import SwiftUI // Für SwiftUI-Bibliothek
-import FirebaseAuth // Für Authentifizierung mit Firebase
+import SwiftUI
+import FirebaseAuth
 import FirebaseFirestore
 
 struct ProfileView: View {
@@ -60,6 +60,7 @@ struct ProfileView: View {
         
         Button("Abmelden") {
             viewModel.logOut()
+            
         }
         .tint(.red)
         .padding()
