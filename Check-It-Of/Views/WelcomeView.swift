@@ -9,7 +9,7 @@ import SwiftUI
 import CoreLocationUI
 
 struct WelcomeView: View {
-    @EnvironmentObject var locationManager: LocationManager
+    @EnvironmentObject var locationManager: LocationManagerModel
 
     var body: some View {
         VStack {

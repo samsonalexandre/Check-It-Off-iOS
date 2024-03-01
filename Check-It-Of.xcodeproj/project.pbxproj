@@ -16,7 +16,7 @@
 		965B87D92B8C86C3001B6619 /* WeatherManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87D82B8C86C3001B6619 /* WeatherManagerModel.swift */; };
 		965B87DB2B8C8723001B6619 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87DA2B8C8723001B6619 /* Extensions.swift */; };
 		965B87DE2B8C884B001B6619 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87DD2B8C884B001B6619 /* ModelData.swift */; };
-		965B87E02B8C8DB8001B6619 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87DF2B8C8DB8001B6619 /* LocationManager.swift */; };
+		965B87E02B8C8DB8001B6619 /* LocationManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B87DF2B8C8DB8001B6619 /* LocationManagerModel.swift */; };
 		9660B4662B74AE1E00715334 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9660B4652B74AE1E00715334 /* FirebaseAnalytics */; };
 		9660B4682B74AE1E00715334 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 9660B4672B74AE1E00715334 /* FirebaseAnalyticsOnDeviceConversion */; };
 		9660B46A2B74AE1E00715334 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9660B4692B74AE1E00715334 /* FirebaseAnalyticsSwift */; };
@@ -64,7 +64,7 @@
 		965B87D82B8C86C3001B6619 /* WeatherManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManagerModel.swift; sourceTree = "<group>"; };
 		965B87DA2B8C8723001B6619 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		965B87DD2B8C884B001B6619 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		965B87DF2B8C8DB8001B6619 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		965B87DF2B8C8DB8001B6619 /* LocationManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerModel.swift; sourceTree = "<group>"; };
 		966859DA2B7375FA00748E6F /* Check-It-Of.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check-It-Of.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		966859DD2B7375FA00748E6F /* Check_It_OfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_It_OfApp.swift; sourceTree = "<group>"; };
 		966859DF2B7375FA00748E6F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				965B87DA2B8C8723001B6619 /* Extensions.swift */,
-				965B87DF2B8C8DB8001B6619 /* LocationManager.swift */,
 				96F28ABF2B90E2C60099E3DC /* weatherData.json */,
 			);
 			path = Components;
@@ -131,6 +130,7 @@
 			children = (
 				966859DC2B7375FA00748E6F /* Check-It-Of */,
 				966859DB2B7375FA00748E6F /* Products */,
+				966859E32B7375FB00748E6F /* Preview Content */,
 				96685A282B73B83E00748E6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -150,7 +150,6 @@
 				96685A042B7387E400748E6F /* Models */,
 				96685A032B7387D600748E6F /* ViewModels */,
 				96685A022B7387CC00748E6F /* Views */,
-				966859E32B7375FB00748E6F /* Preview Content */,
 				965B87D52B8C85FE001B6619 /* Components */,
 			);
 			path = "Check-It-Of";
@@ -196,6 +195,7 @@
 				96685A202B738BFE00748E6F /* RegisterViewModel.swift */,
 				96685A1A2B738BA600748E6F /* ToDoListViewModel.swift */,
 				965B87D82B8C86C3001B6619 /* WeatherManagerModel.swift */,
+				965B87DF2B8C8DB8001B6619 /* LocationManagerModel.swift */,
 				96685A222B738C1F00748E6F /* ToDoListItemViewModel.swift */,
 			);
 			path = ViewModels;
@@ -346,7 +346,7 @@
 				9633B86E2B90B09D00655C31 /* ContentView.swift in Sources */,
 				96685A1D2B738BC800748E6F /* NewItemViewModel.swift in Sources */,
 				96685A232B738C2000748E6F /* ToDoListItemViewModel.swift in Sources */,
-				965B87E02B8C8DB8001B6619 /* LocationManager.swift in Sources */,
+				965B87E02B8C8DB8001B6619 /* LocationManagerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

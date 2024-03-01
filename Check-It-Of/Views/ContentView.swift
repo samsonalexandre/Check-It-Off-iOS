@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var locationManager = LocationManager()
+    @StateObject var locationManager = LocationManagerModel()
     var weatherManager = WeatherManagerModel()
     @State var weather: ResponseBody?
     
