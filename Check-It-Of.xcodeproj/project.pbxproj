@@ -130,7 +130,6 @@
 			children = (
 				966859DC2B7375FA00748E6F /* Check-It-Of */,
 				966859DB2B7375FA00748E6F /* Products */,
-				966859E32B7375FB00748E6F /* Preview Content */,
 				96685A282B73B83E00748E6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +145,7 @@
 		966859DC2B7375FA00748E6F /* Check-It-Of */ = {
 			isa = PBXGroup;
 			children = (
+				966859E32B7375FB00748E6F /* Preview Content */,
 				96685A052B7387EE00748E6F /* Other */,
 				96685A042B7387E400748E6F /* Models */,
 				96685A032B7387D600748E6F /* ViewModels */,
