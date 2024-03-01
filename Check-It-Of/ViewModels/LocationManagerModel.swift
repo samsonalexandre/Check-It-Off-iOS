@@ -10,7 +10,7 @@ import CoreLocation // Für die Standortverwaltung
 import Combine // Für die Verwendung von Combine-Framework zur Reaktivprogrammierung
 
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+class LocationManagerModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     
     @Published var location: CLLocationCoordinate2D?
