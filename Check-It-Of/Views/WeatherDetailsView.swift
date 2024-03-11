@@ -70,7 +70,7 @@ struct WeatherDetailsView: View {
             .padding()
             .background(Color.white)
             .cornerRadius(20, corners: [.topLeft, .topRight])
-            .offset(y: -20) // Offset to make space for the tabs below
+            .offset(y: -20)
         }
     }
 }

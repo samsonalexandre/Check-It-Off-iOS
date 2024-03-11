@@ -145,6 +145,7 @@
 		966859DC2B7375FA00748E6F /* Check-It-Of */ = {
 			isa = PBXGroup;
 			children = (
+				96685A2F2B73D0C800748E6F /* GoogleService-Info.plist */,
 				966859E32B7375FB00748E6F /* Preview Content */,
 				96685A052B7387EE00748E6F /* Other */,
 				96685A042B7387E400748E6F /* Models */,
@@ -214,7 +215,6 @@
 		96685A052B7387EE00748E6F /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				96685A2F2B73D0C800748E6F /* GoogleService-Info.plist */,
 				966859DD2B7375FA00748E6F /* Check_It_OfApp.swift */,
 				966859E12B7375FB00748E6F /* Assets.xcassets */,
 			);
