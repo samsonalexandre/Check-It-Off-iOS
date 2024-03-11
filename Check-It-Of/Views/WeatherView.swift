@@ -48,16 +48,6 @@ struct WeatherView: View {
                     Spacer()
                         .frame(height:  100)
                     
-                    AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 350)
-                            .offset(y: -90)
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
@@ -73,17 +63,17 @@ struct WeatherView: View {
                         .padding(.bottom)
                     
                     HStack {
-                        WeatherRowView(logo: "thermometer", name: "Mindesttemperatur", value: (weather.main.tempMin.roundDouble() + ("°")))
+                        WeatherRowView(logo: "thermometer", name: "Min temp", value: (weather.main.tempMin.roundDouble() + ("°")))
                         Spacer()
-                        WeatherRowView(logo: "thermometer", name: "Höchsttemperatur", value: (weather.main.tempMax.roundDouble() + "°"))
+                        WeatherRowView(logo: "thermometer", name: "Max temp", value: (weather.main.tempMax.roundDouble() + "°"))
                     }
-                    /*
+                    
                     HStack {
                         WeatherRowView(logo: "wind", name: "Windgeschwindigkeit", value: (weather.wind.speed.roundDouble() + " m/s"))
                         Spacer()
                         WeatherRowView(logo: "humidity", name: "Luftfeuchtigkeit", value: "\(weather.main.humidity.roundDouble())%")
                     }
-                    */
+                    
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(20)
@@ -95,8 +85,6 @@ struct WeatherView: View {
             }
         }
         .edgesIgnoringSafeArea(.bottom)
-        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
-        .preferredColorScheme(.dark)
     }
 }
 
