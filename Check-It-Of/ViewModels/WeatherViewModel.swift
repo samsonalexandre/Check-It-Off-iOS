@@ -10,7 +10,7 @@ import CoreLocation
 import Combine
 
 // Manager-Klasse für Wetterabruf
-class WeatherManagerModel {
+class WeatherViewModel {
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> ResponseBody {
 
         let apiKey = "d05d140071e6bfee973ba935949bed53"
