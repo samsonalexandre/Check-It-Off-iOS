@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96254B892B9EF46000940D96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96254B882B9EF45F00940D96 /* GoogleService-Info.plist */; };
+		960296F72BA043B5008C7E83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 960296F62BA043B5008C7E83 /* GoogleService-Info.plist */; };
 		9633B86A2B909CC100655C31 /* WeatherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B8692B909CC100655C31 /* WeatherDetailsView.swift */; };
 		9633B86C2B909E6100655C31 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B86B2B909E6100655C31 /* LoadingView.swift */; };
 		9633B86E2B90B09D00655C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9633B86D2B90B09D00655C31 /* ContentView.swift */; };
@@ -56,7 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		96254B882B9EF45F00940D96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		960296F62BA043B5008C7E83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9633B8692B909CC100655C31 /* WeatherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsView.swift; sourceTree = "<group>"; };
 		9633B86B2B909E6100655C31 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9633B86D2B90B09D00655C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		966859DC2B7375FA00748E6F /* Check-It-Of */ = {
 			isa = PBXGroup;
 			children = (
-				96254B882B9EF45F00940D96 /* GoogleService-Info.plist */,
+				960296F62BA043B5008C7E83 /* GoogleService-Info.plist */,
 				966859E32B7375FB00748E6F /* Preview Content */,
 				96685A052B7387EE00748E6F /* Other */,
 				96685A042B7387E400748E6F /* Models */,
@@ -305,7 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966859E52B7375FB00748E6F /* Preview Assets.xcassets in Resources */,
-				96254B892B9EF46000940D96 /* GoogleService-Info.plist in Resources */,
+				960296F72BA043B5008C7E83 /* GoogleService-Info.plist in Resources */,
 				966859E22B7375FB00748E6F /* Assets.xcassets in Resources */,
 				96F28AC02B90E2C60099E3DC /* weatherData.json in Resources */,
 			);
