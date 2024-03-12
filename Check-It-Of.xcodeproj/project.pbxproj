@@ -51,6 +51,7 @@
 		96685A272B73A30100748E6F /* ToDoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96685A262B73A30100748E6F /* ToDoButton.swift */; };
 		96685A2A2B73B83E00748E6F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 96685A292B73B83E00748E6F /* FirebaseAuth */; };
 		96685A2C2B73C35400748E6F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 96685A2B2B73C35400748E6F /* FirebaseFirestore */; };
+		96A5ABA52BA0ACA90086A4E0 /* ResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5ABA42BA0ACA90086A4E0 /* ResponseBody.swift */; };
 		96E332A82B7F703D0044DFBD /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E332A72B7F703D0044DFBD /* WeatherView.swift */; };
 		96F28AC02B90E2C60099E3DC /* weatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 96F28ABF2B90E2C60099E3DC /* weatherData.json */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		96685A222B738C1F00748E6F /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
 		96685A242B73905400748E6F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		96685A262B73A30100748E6F /* ToDoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoButton.swift; sourceTree = "<group>"; };
+		96A5ABA42BA0ACA90086A4E0 /* ResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBody.swift; sourceTree = "<group>"; };
 		96E332A72B7F703D0044DFBD /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		96F28ABF2B90E2C60099E3DC /* weatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 				96685A122B738A8300748E6F /* User.swift */,
 				96685A142B738AF900748E6F /* ToDoListItem.swift */,
 				965B87DD2B8C884B001B6619 /* ModelData.swift */,
+				96A5ABA42BA0ACA90086A4E0 /* ResponseBody.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				96685A072B73891000748E6F /* ProfileView.swift in Sources */,
 				96E332A82B7F703D0044DFBD /* WeatherView.swift in Sources */,
 				96685A1B2B738BA600748E6F /* ToDoListViewModel.swift in Sources */,
+				96A5ABA52BA0ACA90086A4E0 /* ResponseBody.swift in Sources */,
 				96685A1F2B738BE400748E6F /* LoginViewModel.swift in Sources */,
 				966859DE2B7375FA00748E6F /* Check_It_OfApp.swift in Sources */,
 				965B87D92B8C86C3001B6619 /* WeatherViewModel.swift in Sources */,

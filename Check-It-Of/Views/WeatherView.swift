@@ -26,7 +26,6 @@ struct WeatherView: View {
                 
                 Spacer() // Platziert den Inhalt oben und gibt Platz für die Tabs
                 
-                // Hier bleibt der restliche Inhalt des WeatherViews
                 VStack {
                     HStack {
                         VStack(spacing: 20) {
