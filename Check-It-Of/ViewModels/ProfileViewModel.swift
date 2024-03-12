@@ -37,6 +37,7 @@ class ProfileViewModel: ObservableObject {
     func logOut() {
         do {
             try Auth.auth().signOut()
+            user = nil
         } catch {
             print(error)
         }

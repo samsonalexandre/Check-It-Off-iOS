@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-// Extension for rounded Double to 0 decimals
+// Erweiterung für die Rundung von Double auf 0 Dezimalstellen
 extension Double {
     func roundDouble() -> String {
         return String(format: "%.0f", self)
@@ -16,7 +16,7 @@ extension Double {
 }
 
 
-// Extension for adding rounded corners to specific corners
+// Erweiterung zum Hinzufügen von abgerundeten Ecken zu bestimmten Ecken
 extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners) )
