@@ -40,8 +40,6 @@ Die App ist in Swift geschrieben, der Programmiersprache für iOS-Entwicklung.
 Firebase wird für die Authentifizierung und die Datenbank verwendet.
 ### Firestore: 
 Firestore wird für die Speicherung von Benutzerdaten und Aufgaben verwendet.
-### Combine: 
-Combine wird für die Reaktivprogrammierung in der App verwendet.
 
 ## Lizenz
 
